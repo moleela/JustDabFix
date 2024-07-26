@@ -18,7 +18,7 @@ services:
     networks:
       - my-net
 
-  app:
+  backend:
     depends_on:
       - mysql
     build:
@@ -27,9 +27,7 @@ services:
     container_name: just_dab_app
     restart: always
     environment:
-      DATABASE_DRIVER: "com.mysql.cj.jdbc.Driver"
       DATABASE_URL: "jdbc:mysql://justdabsql:3306/just_dab_db"
-      DATABASE_USERNAME: "root"
       DATABASE_PASSWORD: "password"
     ports:
       - "8081:8080"
