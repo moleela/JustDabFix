@@ -32,8 +32,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Execute Gradle Tests
-        run: |
-          cd MedHeadBackEnd
+        run:
           ./gradlew test
 
       - name: Store Tests Reports
